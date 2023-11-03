@@ -1,13 +1,13 @@
 {% assign c = 'header' %}
 
 <header>
-  <nav class="{{ c }}">
+  <nav class="{{ c }}" x-data="{ open: false }">
     <div class="{{ c }}__container">
       <!-- Logo -->
       <a class="{{ c }}__logo" href="/">
           <img src="{{ nav.logo }}" alt="Nav-Logo" />
       </a>
-      <div class="{{ c }}__nav" x-data="{ open: false }">
+      <div class="{{ c }}__nav">
         <!-- Hamburger -->
         <button x-on:click="open = ! open" class="{{ c }}__hamburger">
           <span x-show="!open" class="navbar-toggler-default">
@@ -74,15 +74,6 @@
             </svg>
           </span>
         </button>
-        <!-- Mobile nav -->
-        <ul class="{{ c }}__nav-list-mobile" x-show="open" x-cloak x-transition>
-          {% for item in nav.items %}
-            {% assign url = item.link %}
-            <li>
-              <a class="nav-link {% if page.url == url%}active{% endif %}" href="{{ item.link }}">{{ item.text }}</a>
-            </li>
-          {% endfor %}
-        </ul>
         <!-- Desktop nav -->
         <ul class="{{ c }}__nav-list">
           {% for item in nav.items %}
@@ -94,5 +85,15 @@
         </ul>
       </div> 
     </div>
+    <!-- Mobile nav -->
+    <ul class="{{ c }}__nav-list-mobile" x-show="open" x-cloak x-transition>
+      {% for item in nav.items %}
+        {% assign url = item.link %}
+        <li>
+          <a class="nav-link {% if page.url == url%}active{% endif %}" href="{{ item.link }}">{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </nav>
 </header>
+
