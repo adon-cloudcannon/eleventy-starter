@@ -7,12 +7,10 @@ const config = {
             plugins:[                
                 require('postcss-nested'),
                 require('@knagis/postcss-advanced-variables'),
-                require('postcss-media-variables'),                
                 require('postcss-custom-media'),
                 require('postcss-css-variables')({
                     preserve: true
                 }),
-                require('postcss-media-variables') ,
                 require('postcss-mixins'),
                 require('postcss-preset-env')
             ]

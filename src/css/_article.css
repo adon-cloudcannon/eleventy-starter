@@ -4,7 +4,7 @@
   max-width: var(--max-width-md);
   margin-inline: auto;
 
-  @media screen and (min-width: var(--max-width-md)) {
+  @media (--tablet) {
     padding-inline: 32px;
   }
 
@@ -32,10 +32,10 @@
       font-size: 2rem;
       font-weight: bold;
 
-      @media screen and (min-width: var(--max-width-md)) {
+      @media (--tablet) {
         font-size: 3rem;
       }
-      @media screen and (min-width: var(--max-width-xl)) {
+      @media (--desktop) {
         font-size: 4rem;
       }
     }

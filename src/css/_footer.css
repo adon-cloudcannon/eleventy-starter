@@ -30,7 +30,7 @@
      padding-block: 32px; 
     }
 
-    @media screen and (min-width: var(--max-width-xl)) {
+    @media (--desktop) {
       width: 50%;
       text-align: start;
       align-items: start;
@@ -77,11 +77,7 @@
     h3 {
       color: var(--color-text-white);
       font-weight: bold;
-      padding-bottom: 16px;
-
-      @media screen and (min-width: var(--max-width-xs)) {
-        padding-bottom: 32px;
-      }
+      padding-bottom: 32px;
     }
 
     li {
