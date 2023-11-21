@@ -55,17 +55,21 @@ module.exports = function (eleventyConfig) {
   }
   
   eleventyConfig.addShortcode("image", async (srcFilePath, alt, sizes, preferSvg) => {
-    let inputFilePath = path.join(eleventyConfig.dir.input, srcFilePath)
-    let metadata = await Image(inputFilePath, Object.assign({
-      svgShortCircuit: preferSvg ? "size" : false
-    }, IMAGE_OPTIONS));
+    if(srcFilePath)
+    {
+      let inputFilePath = path.join(eleventyConfig.dir.input, srcFilePath)
+      let metadata = await Image(inputFilePath, Object.assign({
+        svgShortCircuit: preferSvg ? "size" : false
+      }, IMAGE_OPTIONS));
 
-    return Image.generateHTML(metadata, {
-      alt,
-      sizes,
-      loading: "eager",
-      decoding: "async"
-    });
+      return Image.generateHTML(metadata, {
+        alt,
+        sizes,
+        loading: "eager",
+        decoding: "async"
+      });
+    }
+    return false;
   });
 
   // Display the current year

@@ -1,9 +1,9 @@
 {%- capture inner_slides -%}
 
-    {% for image in slides %}
+    {% for slide in slides %}
         <li class='card'>
             <div class='img'>
-                <img src="{{ image }}" alt="" draggable="false"/>
+                {% bookshop "global/image" image: slide.image image_alt:slide.image_alt %}
             </div>
         </li>
     {% endfor %}

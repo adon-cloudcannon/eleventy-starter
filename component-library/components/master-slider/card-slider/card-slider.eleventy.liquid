@@ -7,7 +7,7 @@
             {% endif %}
             {% if card.image %}
                 <div class='img'>
-                    <img src="{{ card.image }}" alt="{{ card.image_alt }}" draggable="false"/>
+                    {% bookshop "global/image" image: card.image image_alt: card.image_alt %}
                 </div>
             {% endif %}
         </li>
