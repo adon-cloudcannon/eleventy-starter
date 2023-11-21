@@ -4,7 +4,7 @@ spec:
   label: Image
   description: "Optimized image with fallback for CloudCannon live editing"
   icon: "image"
-  tags: ['image']
+  tags: []
 
 # Defines the structure of this component, as well as the default values
 blueprint:
