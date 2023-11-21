@@ -6,6 +6,14 @@ const { Tokenizer, assert } = require('liquidjs');
 const path = require("node:path")
 const Image = require("@11ty/eleventy-img")
 
+// Image optimization
+const IMAGE_OPTIONS = {
+  widths: [400, 800, 1600],
+  formats: ["avif", "webp", "svg", "jpeg"],
+  outputDir: "./_site/optimized",
+  urlPath: "/optimized/"
+}
+
 // Prebuild scripts
 const fetch_theme_colors = require('./utils/fetch-theme-color')
 
@@ -41,15 +49,7 @@ module.exports = function (eleventyConfig) {
         ctx.scopes[ctx.scopes.length-1][this.key] = this.liquid.evalValueSync(this.value, ctx);
       }
     }
-  });
-
-  // Image optimization
-  const IMAGE_OPTIONS = {
-    widths: [400, 800, 1600],
-    formats: ["avif", "webp", "svg", "jpeg"],
-    outputDir: "./_site/optimized",
-    urlPath: "/optimized/"
-  }
+  });  
   
   eleventyConfig.addShortcode("image", async (srcFilePath, alt, sizes, preferSvg) => {
     if(srcFilePath)
