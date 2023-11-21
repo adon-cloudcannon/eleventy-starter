@@ -66,7 +66,7 @@ module.exports = function (eleventyConfig) {
         decoding: "async"
       });
     }
-    return false;
+    return `<img src="" />`
   });
 
   // Display the current year
