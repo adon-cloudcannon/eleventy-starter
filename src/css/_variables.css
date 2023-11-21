@@ -10,7 +10,7 @@
     --color-gray: #808080;
     --color-gray-light: color-mix(in srgb, var(--color-gray) 10%, var(--color-white));
     --color-gray-dark: color-mix(in srgb, var(--color-gray) 50%, var(--color-black));
-    --color-primary: #111111;
+    --color-primary: #034AD8;
     --color-primary-light: color-mix(in srgb, var(--color-primary) 10%, var(--color-white));
     --color-primary-dark: color-mix(in srgb, var(--color-primary) 50%, var(--color-black));
     --color-secondary: #D9CFFF;
