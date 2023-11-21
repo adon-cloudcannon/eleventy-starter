@@ -9,9 +9,6 @@ const Image = require("@11ty/eleventy-img")
 // Prebuild scripts
 const fetch_theme_colors = require('./utils/fetch-theme-color')
 
-// Navigation
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
 // CloudCannon postCSS processing automatically on build
 const postcss_cloudcannon = require("./11typlugin");
 const embedEverything = require("eleventy-plugin-embed-everything");
@@ -84,9 +81,6 @@ module.exports = function (eleventyConfig) {
   // What gets passed through to the built site
   eleventyConfig.ignores.add("src/schemas");
   eleventyConfig.addPassthroughCopy("src/images");
-  
-  // PLugins 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Bookshop integration
   eleventyConfig.addPlugin(pluginBookshop({
