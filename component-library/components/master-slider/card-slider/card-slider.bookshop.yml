@@ -14,7 +14,7 @@ blueprint:
   image_border_radius: 50
   slides: 
     - heading:
-      image: 
+      image_path: 
       image_alt:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -24,7 +24,7 @@ preview:
 _inputs: 
   slides[*].heading:
     comment: Text to display on this card (optional).
-  slides[*].image:
+  slides[*].image_path:
     comment: The image to display on this card.
   heading_text:
     comment: Add a block to the top of this slider with optional heading, text and button.

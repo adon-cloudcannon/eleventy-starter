@@ -3,9 +3,9 @@
 <section class="{{ c }}" style="--background-image:url({{ bg_image }})">
    <div class="content-block">
       {% if image_on_left == true %}
-         {% if image %}
+         {% if image_path %}
             <div class="{{ c }}__img {{ c }}__img--image-on-left">
-               {% bookshop "global/image" image: image image_alt: image_alt %}
+               {% bookshop "global/image" image_path: image_path image_alt: image_alt %}
             </div>
          {% endif %}
          <div class="{{ c }}__text {{ c }}__text--image-on-left">
@@ -15,9 +15,9 @@
          <div class="{{ c }}__text">
             {% bookshop "heading-text" bind: heading_text %}
          </div>
-         {% if image %}
+         {% if image_path %}
             <div class="{{ c }}__img">
-               {% bookshop "global/image" image: image image_alt: image_alt %}
+               {% bookshop "global/image" image_path: image_path image_alt: image_alt %}
             </div>
          {% endif %}
       {% endif %}      

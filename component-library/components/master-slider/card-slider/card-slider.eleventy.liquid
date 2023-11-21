@@ -5,9 +5,9 @@
             {% if card.heading %}
                 <h1>{{ card.heading }}</h1>
             {% endif %}
-            {% if card.image %}
+            {% if card.image_path %}
                 <div class='img'>
-                    {% bookshop "global/image" image: card.image image_alt: card.image_alt %}
+                    {% bookshop "global/image" image_path: card.image_path image_alt: card.image_alt %}
                 </div>
             {% endif %}
         </li>

@@ -12,7 +12,7 @@ blueprint:
   image_on_left: false
   heading_text: bookshop:heading-text!
   bg_image:
-  image:
+  image_path:
   image_alt:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
