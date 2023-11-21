@@ -1,5 +1,5 @@
 {% if env_bookshop_live %}
-
+    Live editing!!
     <img class="c-image--live-editing" src="{{ image }}" alt="{{ image_alt }}">
 
 {% elsif image contains 'http://' or image contains 'https://' %}
@@ -7,7 +7,7 @@
     <img class="c-image" src="{{ image }}" alt="{{ image_alt }}">
 
 {% else %}
-
+    Not live editing!
     {%- assign sizes = "100vw" %}
     {% image image, image_alt, sizes, true %}
 
