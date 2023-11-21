@@ -13,11 +13,7 @@
     @media (--desktop) { flex-direction: row; }
   }
 
-  p,
-  a {
-    color: var(--color-text-white);
-  }
-
+  p, a { color: var(--color-text-white); }
 
   &__details {
     display: flex;
@@ -26,9 +22,7 @@
     text-align: center;
     width: 100%;
 
-    p {
-     padding-block: 32px; 
-    }
+    p { padding-block: 32px; }
 
     @media (--desktop) {
       width: 50%;
@@ -38,19 +32,21 @@
   }
 
   &__logo {
-
     a{
       display:flex;
       align-items:center;
+      justify-content:center;
       font-size:64px;
       gap:30px;
-      font-weight:bold;      
+      font-weight:bold;   
+      
+      @media (--tablet){ justify-content:start; }
     }
 
     img,
     svg {
+      filter:invert(1);
       height:100px;
-      width: 100px;
     }
   }
 
