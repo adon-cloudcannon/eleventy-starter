@@ -6,7 +6,7 @@
   background-color: var(--button-background-color);
   width:100%;
 
-  @media only screen and (min-width: var(--max-width-sm)) {
+  @media (--desktop){
     width:auto;
   }
 
@@ -23,7 +23,7 @@
     }    
   
     /* was this meant to be affecting the a tag? it was outside so was having no effect */
-    @media only screen and (min-width: 1020px) {
+    @media (--desktop) {
       font-size: 1.25rem;
     }
   }

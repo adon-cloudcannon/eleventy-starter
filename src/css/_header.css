@@ -14,6 +14,10 @@
     max-width: var(--content-max-width);
     margin: 0 auto;
 
+    @media (--tablet) {
+      padding: var(--base-padding) 32px;
+    }   
+
     @media (--desktop){
       padding-inline: max(1rem, 48px);
     }
