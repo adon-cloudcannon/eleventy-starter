@@ -5,6 +5,7 @@ const chokidar = require("chokidar")
 // plugin imports - these are required minimum
 const postcss = require('postcss')
 const postcss_import_sync = require('postcss-import-sync2')
+const sass = require('sass')
 
 // find all css or scss files in the input directories
 const recurseFiles = (dir, css_files = []) => {        
@@ -22,7 +23,11 @@ const recurseFiles = (dir, css_files = []) => {
 // process the imports before doing anything else
 const processImports = async (file, destination) => {    
     let contents = fs.readFileSync(file, 'utf8');    
-    let temp_result = postcss().use(postcss_import_sync).process(contents, { from: file })    
+    let ext = file.split(".").slice(-1)[0];
+    let temp_result = ext === "css" ? 
+        postcss().use(postcss_import_sync).process(contents, { from: file }) :
+        sass.compile(file)
+
     return fs.appendFileSync(destination, `${temp_result.css}\n`) 
 }
 
@@ -55,7 +60,7 @@ const processCSS = (opts) => {
         if(optional_plugins && optional_plugins.length > 0)
         {
             fs.readFile(destination, 'utf8', (err, contents) => {
-                postcss(optional_plugins).process(contents, { from: undefined }) 
+                postcss(optional_plugins).process(contents, { from: destination }) 
                 .then(result => {
                     fs.writeFile(destination, `${result.css}\n`, () => true)
                 })
