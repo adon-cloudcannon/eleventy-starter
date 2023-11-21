@@ -5,7 +5,7 @@
       {% if image_on_left == true %}
          {% if image %}
             <div class="{{ c }}__img {{ c }}__img--image-on-left">
-               {% bookshop "global/image" bind: image %}
+               {% bookshop "global/image" image: image image_alt: image_alt %}
             </div>
          {% endif %}
          <div class="{{ c }}__text {{ c }}__text--image-on-left">
@@ -17,7 +17,7 @@
          </div>
          {% if image %}
             <div class="{{ c }}__img">
-               {% bookshop "global/image" bind: image %}
+               {% bookshop "global/image" image: image image_alt: image_alt %}
             </div>
          {% endif %}
       {% endif %}      
