@@ -19,7 +19,7 @@
             {% for item in nav.items %}
               {% assign url = item.link %}
               <li>
-                <a class="nav-link {% if page.url == url%}active{% endif %}" href="{{ item.link }}">{{ item.text }}</a>
+                <a class="nav-link {% if page.url == url%}active{% endif %}" href="{{ item.link }}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.text }}</a>
                 {% if item.items %}
                   <ul>
                     {% for subitem in item.items %}
@@ -43,7 +43,7 @@
             {% assign url = item.link %}
             <li class="{{ c }}__nav-list-item">
               <div class="underline"></div>
-              <a class="nav-link {% if page.url == url%}active{% endif %}" href="{{ item.link }}">
+              <a class="nav-link {% if page.url == url%}active{% endif %}" href="{{ item.link }}" {% if item.new_window %}target="_blank"{% endif %}>
                 {{ item.text }}
                 {% if item.items %}                
                   <i class="fa-solid fa-chevron-down"></i>
@@ -58,7 +58,7 @@
                     <ul>
                       {% for subitem in item.items %}
                         <li>
-                          <a class="nav-link" href="{{ subitem.link }}">
+                          <a class="nav-link" href="{{ subitem.link }}" {% if subitem.new_window %}target="_blank"{% endif %}>
                             <i class="fa-solid fa-chevron-right"></i>
                             {{ subitem.text }}
                           </a>

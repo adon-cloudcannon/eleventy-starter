@@ -3,7 +3,8 @@
   "items": [  
     {
       "text": "Example blog",
-      "link": "/blog/"
+      "link": "/blog/",
+      "new_window": false
     },
     {
       "text" : "Other links",
@@ -11,11 +12,13 @@
       "items" : [
         {
           "text": "CloudCannon",
-          "link": "https://cloudcannon.com"
+          "link": "https://cloudcannon.com",
+          "new_window": true
         },
         {
           "text": "Bookshop",
-          "link": "https://cloudcannon.com/documentation/guides/bookshop-eleventy-guide/"
+          "link": "https://cloudcannon.com/documentation/guides/bookshop-eleventy-guide/",
+          "new_window": true
         }
       ]
     }
