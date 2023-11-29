@@ -14,7 +14,7 @@ collections_config:
       default:
         path: schemas/page.html
     _enabled_editors:
-      - visual
+      - visual      
   blog:
     path: blog
     icon: article
@@ -109,6 +109,12 @@ paths:
   uploads: images
   data: _data
   includes: _includes
+
+_inputs:
+  layout:
+    hidden: true
+  permalink:
+    hidden: true
 
 _snippets_imports:
   eleventy_liquid: true
