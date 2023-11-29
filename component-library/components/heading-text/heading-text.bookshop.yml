@@ -2,7 +2,7 @@
 spec:
   structures:
     - basic_block
-  label: "Heading-text"
+  label: A simple heading component with paragraph text
   description:
   icon: title
   tags: ['text', 'heading']
@@ -20,6 +20,7 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   heading_level: 
+    comment: Choose the size of the heading (h1, h2) for this block
     type: select
     options:
       values:

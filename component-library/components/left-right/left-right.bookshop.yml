@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Left-Right Block
-  description: Left-Right block with heading, text & button next to image.
+  label: Left/Right Block
+  description: Left/Right block with heading, text & button next to image.
   icon: 'chrome_reader_mode'
   tags: ['block', 'left-right']
 
