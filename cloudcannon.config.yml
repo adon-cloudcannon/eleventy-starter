@@ -128,10 +128,7 @@ _inputs:
     hidden: true
   permalink:
     hidden: true
-  tags:
-    type: multiselect
-    options:
-      allow_create: true
+
 
 
 _snippets_imports:
