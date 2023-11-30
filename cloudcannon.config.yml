@@ -19,9 +19,9 @@ collections_config:
         icon: stars
     schemas:
       default:
-        path: schemas/page.html
+        path: src/schemas/page.html
       hero:
-        path: schemas/hero.html
+        path: src/schemas/hero.html
     _enabled_editors:
       - visual      
   blog:
@@ -31,7 +31,7 @@ collections_config:
     output: true
     schemas:
       default:
-        path: schemas/blog.html
+        path: src/schemas/blog.html
     preview:
       metadata: 
         - icon: newspaper
