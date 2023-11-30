@@ -2,8 +2,8 @@
 spec:
   structures:
     - basic_block
-  label: A simple heading component with paragraph text
-  description:
+  label: Heading w/text
+  description: A simple heading component with paragraph text
   icon: title
   tags: ['text', 'heading']
 

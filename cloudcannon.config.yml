@@ -128,6 +128,12 @@ _inputs:
     hidden: true
   permalink:
     hidden: true
+  tags:
+    type: multiselect
+    options:
+      allow_create: true
+      values: tags
+
 
 _snippets_imports:
   eleventy_liquid: true
@@ -165,3 +171,6 @@ _snippets:
       named_args:
         - editor_key: id
           type: string
+
+  data_config:
+    tags: true
