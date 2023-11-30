@@ -29,8 +29,12 @@ collections_config:
     icon: article
     disable_add_folder: true
     output: true
+    add_options:
+      - name: New Article
+        schema: blog
+        icon: article
     schemas:
-      default:
+      blog:
         path: src/schemas/blog.html
     preview:
       metadata: 
