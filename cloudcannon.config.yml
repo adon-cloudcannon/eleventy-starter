@@ -171,5 +171,3 @@ _snippets:
         - editor_key: id
           type: string
 
-  data_config:
-    tags: true
