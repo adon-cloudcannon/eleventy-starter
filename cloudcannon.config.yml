@@ -10,9 +10,18 @@ collections_config:
     disable_add_folder: true
     output: true
     path: pages
+    add_options:
+      - name: New Page
+        schema: default
+        icon: feed
+      - name: New Hero Page
+        schema: hero
+        icon: stars
     schemas:
       default:
         path: schemas/page.html
+      hero:
+        path: schemas/hero.html
     _enabled_editors:
       - visual      
   blog:
@@ -20,14 +29,14 @@ collections_config:
     icon: article
     disable_add_folder: true
     output: true
-    # schemas:
-    #   default:
-    #     path: site/schemas/post.md
-    # preview:
-    #   metadata: 
-    #     - icon: newspaper
-    #       text: 
-    #         - key: tags
+    schemas:
+      default:
+        path: schemas/blog.html
+    preview:
+      metadata: 
+        - icon: newspaper
+          text: 
+            - key: tags
     _enabled_editors:
       - content
       - visual
