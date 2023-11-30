@@ -31,10 +31,10 @@ collections_config:
     output: true
     add_options:
       - name: New Article
-        schema: blog
+        schema: default
         icon: article
     schemas:
-      blog:
+      default:
         path: src/schemas/blog.html
     preview:
       metadata: 
